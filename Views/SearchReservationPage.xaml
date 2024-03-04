@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightApp.Views.SearchReservationPage"
+             Title="">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+                Text="Search for Reservations:"
+                VerticalOptions="Center" 
+                FontSize="Header"
+                FontAttributes="Bold" />
+            <Label Text="Search"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   Margin="25">
+            </Label>
+            <Label Text="Code"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="25">
+            </Label>
+            <Entry Text="" Placeholder="Enter the code" FontAttributes="Bold" WidthRequest="1500" ></Entry>
+            <Label Text="Airline"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="25">
+            </Label>
+            <Entry Text="" Placeholder="Enter the Airline" FontAttributes="Bold" WidthRequest="1500" ></Entry>
+            <Label Text="Name"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="25">
+            </Label>
+            <Entry Text="" Placeholder="Enter the Name" FontAttributes="Bold" WidthRequest="1500" ></Entry>
+            <Button Text="Find Reservation" BackgroundColor="ForestGreen" WidthRequest="350" FontSize="Medium" Margin="30"></Button>
+            <Label Text="Reservation"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    Margin="25">
+            </Label>
+            <Entry Text="" Placeholder="Please Select your reservation" FontAttributes="Bold" WidthRequest="1500" ></Entry>
+            <Button x:Name="Back_to_home_page_from_Search_registration" Text="Back" BackgroundColor="OrangeRed" WidthRequest="350" FontSize="Medium" Margin="30" Clicked="Back_to_home_page_from_Search_registration_Clicked"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

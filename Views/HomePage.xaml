@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlightApp.Views.HomePage"
+             Title="Flights"
+             BackgroundColor="LightSteelBlue"
+             Padding="21"
+             >
+
+
+
+    <VerticalStackLayout>
+        <Frame  WidthRequest="800" >
+            <VerticalStackLayout>
+                <Label ></Label>
+                <Image Source="newflightpicture.jpg" Margin="10"   WidthRequest="300" ></Image>
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame Margin="21" WidthRequest="600"   CornerRadius="20">
+            <HorizontalStackLayout>
+                <Button x:Name="find_flights_button" Text="Find FLights" FontAttributes="Bold" FontSize="Medium" BackgroundColor="DeepPink" WidthRequest="550" VerticalOptions="Center" HorizontalOptions="Center" Clicked="find_flights_button_Clicked" ></Button>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="21" WidthRequest="600"  CornerRadius="20">
+            <HorizontalStackLayout>
+                <Button x:Name="reserve_flights_button" Text="Reserve Flights" FontAttributes="Bold" FontSize="Medium" BackgroundColor="MediumPurple" WidthRequest="550" VerticalOptions="Center" HorizontalOptions="Center" Clicked="reserve_flights_button_Clicked"></Button>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <Frame Margin="21" WidthRequest="600"   CornerRadius="20">
+            <HorizontalStackLayout>
+                <Button Text="About_us"  FontAttributes="Bold" FontSize="Medium" BackgroundColor="Green" WidthRequest="550" VerticalOptions="Center" HorizontalOptions="Center" Clicked="about_us_Button_Clicked" ></Button>
+            </HorizontalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
