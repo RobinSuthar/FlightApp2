@@ -15,13 +15,13 @@
             <HorizontalStackLayout  MaximumHeightRequest="60"  >
                 <Label Text="From:" FontSize="Medium" WidthRequest="350" Margin="16"></Label>
                 <Label Text="To:" FontSize="Medium" WidthRequest="350" Margin="16"></Label>
-                <Label Text="Any:" FontSize="Medium" WidthRequest="350" Margin="16"></Label>
+                <Label Text="Day:" FontSize="Medium" WidthRequest="350" Margin="16"></Label>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout   >
-                <Entry WidthRequest="350" FontSize="Medium" Placeholder="From"  Margin="16"></Entry>
-                <Entry WidthRequest="350" FontSize="Medium" Placeholder="To" Margin="16"></Entry>
-                <Entry WidthRequest="350" FontSize="Medium" Placeholder="Any" Margin="16"></Entry>
+                <Entry x:Name="From_user_given" WidthRequest="350" FontSize="Medium" Placeholder="From"  Margin="16" ></Entry>
+                <Entry x:Name="To_user_given" WidthRequest="350" FontSize="Medium" Placeholder="To" Margin="16"></Entry>
+                <Entry x:Name="Day_user_given" WidthRequest="350" FontSize="Medium" Placeholder="Any" Margin="16"></Entry>
                 <Button x:Name="Find_flights_btn" Text="Find Flights" FontSize="Medium" WidthRequest="350" Margin="16" BackgroundColor="ForestGreen" Clicked="Find_flights_btn_Clicked"></Button>
             </HorizontalStackLayout>
             <Label 
@@ -31,19 +31,33 @@
                 FontAttributes="Bold"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+            
 
             <Entry x:Name="display_flights" Placeholder="Loading" WidthRequest="1500"> </Entry>
 
-            <ListView x:Name="ListOfFlights"
-            ItemSelected="ListOfFlights_ItemSelected">
-                <ListView.ItemTemplate  >
-                    <DataTemplate >
-                        <TextCell  Text="{Binding FlightName}"
-                      Detail="{Binding flightNumber}">
+            <ListView  Margin="20"  x:Name="ListOfFlights"
+            ItemSelected="ListOfFlights_ItemSelected"
+                        RowHeight="50">
+                <ListView.ItemTemplate   >
+                    <DataTemplate  >
+                        <TextCell   Text="{Binding FlightName}"
+                                   Detail="{Binding Departure}">
                         </TextCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+            <ListView x:Name="FoundListOfFlights">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Day}"
+                                  Detail="{Binding Cost}">
+                            
+                        </TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
 
             <Label 
                 Margin="30"

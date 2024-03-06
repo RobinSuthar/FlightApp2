@@ -11,6 +11,7 @@ namespace FlightApp
             Routing.RegisterRoute(nameof(FlightFinderPage), typeof(FlightFinderPage));
             Routing.RegisterRoute(nameof(AboutUsPage), typeof(AboutUsPage));
             Routing.RegisterRoute(nameof(SearchReservationPage), typeof(SearchReservationPage));
+            Routing.RegisterRoute(nameof(ResultOfFlights), typeof(ResultOfFlights));
         }
     }
 }

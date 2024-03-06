@@ -14,6 +14,7 @@ namespace FlightApp.Models
         public string Day { get; set; }
         public int Time { get; set; }
         public double Cost { get; set; }
+        public string Arrival { get; set; }
 
     }
 }
